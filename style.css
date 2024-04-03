@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://fonts.gstatic.com/s/poppins/v15/pxiGyp8kv8JHgFVrLCz7Z1xlFQ.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #080808;
+}
+
+
+
+
+.container{
+    justify-content: center;
+}
+
+.header{
+    width: 90%;
+    margin: 41px auto 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    
+}
+
+
+.logo{
+    font-size: 28px;
+    background-image: linear-gradient(to right, #7900FF,#00BF63);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+
+    
+}
+
+.menu{      
+    display: inline-block ;
+    margin: auto;
+    
+}
+
+.menu li{
+    float: left;  
+    list-style-type: none;
+    margin-left: 30px;
+   
+}
+
+.menu a{
+    text-decoration: none;
+    color: rgb(213, 206, 217);
+    
+}
+ 
+.menu a:hover{
+    border-bottom: 3px solid #7900FF;
+
+    
+}
+
+.social-media{
+    display: inline-block;
+}
+
+.social-media a{
+    margin-left: 20px;
+}
+
+.social-media a i{
+    color: white;
+    font-size: 32px;
+}
+
+
+
+.content{
+    
+    color: #e6e6e6;
+    margin: 80px 0 0px 80px;
+
+    
+    
+}
+
+.content p {
+    font-size: 28px;
+    font-weight: 700;
+    width: 50%;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+.content a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #7900FF,#00BF63);
+    padding: 15px;
+}
+
+.content a:hover{
+    opacity: 0.8;
+    border: 1px solid white;
+}
+
+.content i{
+    color: white;
+}
+
+.nome{
+    background-image: linear-gradient(to right, #7900FF,#00BF63);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+
+.matrix{
+    width: 420px;
+    margin-top: -280px;
+    float: right;
+    
+}
+
+/*SOBRE*/
+
+.content2{
+    
+    color: #e6e6e6;
+    margin: 80px 80px 0px 80px;
+
+    
+    
+}
+
+.content2 p {
+    font-size: 28px;
+    font-weight: 700;
+    width: 50%;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+
+.content2 a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #7900FF,#00BF63);
+    padding: 15px;
+}
+
+.content2 a:hover{
+    opacity: 0.8;
+    border: 1px solid white;
+}
+
+.content2 i{
+    color: white;
+}
+
+.content2 .cards {
+    width: auto;
+}
+
+
+.content2 .cards h1{
+    background-image: linear-gradient(to top , #7900FF, #00BF63);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.content2 .cards p{
+    color: rgb(213, 206, 217);
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 0;
+    width: auto;
+    text-align: justify;
+}
+
+.content2 .cards h2{
+    font-weight: normal;
+    font-size: 18px;
+    display: inline-block;
+    margin: 0 0 20px 0;
+    
+}
+
+.sub-card{
+    margin: 5px 0 20px 0;
+    width: 90%;
+}
+
+.sub-card0{
+    width: auto;
+}
+
+.empresa{
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.empresa i{
+    margin-right: 5px;
+}
+
+.location{
+    font-size: 12px;
+}
+.location i{
+    margin-right: 5px;
+}
+
+.cards .ul{
+    
+    width: auto;
+}
+
+
+.cards .ul li{
+    
+    list-style-type: circle;
+    text-align: justify;
+    width: auto;
+}
+
+.tag-cargo{
+    float: right;
+    background-color: #7900FF;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.data-cargo{
+    float: right;    
+    padding: 10px 0 0 0;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+hr{
+    width: auto;
+    margin: 25px 0 25px 0;
+    border: 1px solid #00BF63 ;
+    border-radius: 30px;
+}
