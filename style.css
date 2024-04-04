@@ -254,3 +254,35 @@ hr{
     border: 1px solid #00BF63 ;
     border-radius: 30px;
 }
+
+/*TECNOLOGIAS*/
+
+.ul-tech{
+    justify-content: center;  
+    align-items: center;
+    display: flex;
+    margin-top: 100px;
+}
+
+.ul-tech li{
+    list-style-type: none;
+    float: left;
+    margin-right: 15px; 
+     
+}
+
+.ul-tech li img{
+    width: 160px;
+    height: 130px;
+    transition: transform 1.0s ease;
+}
+
+.ul-tech li img:hover{
+    transform: rotateY(360deg);
+}
+
+/*PROJETOS*/
+
+.cards-posts{
+    border-radius: 30px;
+}
