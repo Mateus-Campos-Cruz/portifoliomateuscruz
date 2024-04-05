@@ -284,8 +284,22 @@ hr{
 
 /*PROJETOS*/
 
+.content2{
+    width: auto;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.content2 .content-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .content2 .cards3 {
     width: auto;
+    height: auto;
+    margin-bottom: 50px;
 }
 
 
@@ -305,16 +319,38 @@ hr{
     text-align: justify;
 }
 
+
+
 .cards-posts{
-    display: inline-block;
+    width: 350px;
+    height: 500px;
+    margin-top: 30px;
     border-radius: 30px;
     background-color: #3b3a3a;
-    margin-right: 40px;
+    margin-bottom: 50px;
+    transition: transform 1.0s ease;
 }
 
+.cards-posts:hover{
+    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+
+}
+
+
 .cards-posts img{
+    width: 350px;
+    height: 200px;
     opacity: 0.5;
     border-radius: 30px 30px 0 0 ;
+}
+
+.cards3 .cards-posts h2 {
+    width: 90%;
+    margin: 27px auto 17px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    
 }
 
 .cards3 .cards-posts p {
@@ -322,7 +358,32 @@ hr{
     margin: 27px auto 17px;
     text-align: center;
     font-weight: 500;
-    font-size: 28px;
-    color: rgb(175, 26, 26);
+    font-size: 18px;
     
+}
+
+.cards3 .cards-posts .links-sites a{
+    background-image: none;
+    color: rgb(174, 188, 236);
+    text-decoration: underline;
+    padding: 0;
+}
+
+.cards3 .cards-posts .links-sites a:hover{
+    opacity: 0.8;
+    border: none;
+}
+
+
+.cards3 .cards-posts .links-sites a i{
+    color: rgb(174, 188, 236);
+    margin-right: 10px;
+}
+
+.cards3 .cards-posts .links-sites{
+    width: 90%;
+    margin: 47px auto 17px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
 }
