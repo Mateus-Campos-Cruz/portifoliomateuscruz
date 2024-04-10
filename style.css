@@ -323,7 +323,7 @@ hr{
 
 .cards-posts{
     width: 350px;
-    height: 500px;
+    height: auto;
     margin-top: 30px;
     border-radius: 30px;
     background-color: #3b3a3a;
