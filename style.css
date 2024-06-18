@@ -286,10 +286,12 @@ hr{
 
 /*TECNOLOGIAS*/
 
+
 .ul-tech{
     justify-content: center;  
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     margin-top: 100px;
     width: cover;
 }
@@ -298,8 +300,10 @@ hr{
     list-style-type: none;
     float: left;
     margin-right: 15px; 
+    margin-bottom: 40px;
      
 }
+
 
 .ul-tech li img{
     width: 160px;
