@@ -59,6 +59,10 @@ body {
     
 }
 
+.menuBars {
+    display: none;
+}
+
 
 .logo{
     font-size: 28px;
