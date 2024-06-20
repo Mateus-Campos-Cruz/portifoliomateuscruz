@@ -463,7 +463,7 @@ hr{
 
     .header {
         display: grid;
-        grid-template-columns: 20% 60% 15%;
+        grid-template-columns: 50% 50%;
         margin: 20px 15px;
     }
 
@@ -480,8 +480,8 @@ hr{
         display: none;
     }
 
-    .menuBars {
-        background-color: white;
+    .menuBars a i{
+        color: white;
     }
 
     .content2 .content-cards{
