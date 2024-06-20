@@ -441,6 +441,11 @@ hr{
 
 @media(max-width: 425px){
 
+    html, body {
+        overflow-x: hidden;
+    
+    }
+
     body {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -468,25 +473,16 @@ hr{
     }
 
     .menu {
-        margin: 0;
-    }
-
-    .menu li {
-        font-size: 10px;
-        margin: 5px;
+        display: none;
     }
 
     .social-media {
-        display: flex;
-        justify-content: center;
+        display: none;
     }
 
-    .social-media a {
-        
+    .menuBars {
+        background-color: white;
     }
-    .social-media a i{
-        font-size: 16px;
-    }  
 
     .content2 .content-cards{
         justify-content: center;
