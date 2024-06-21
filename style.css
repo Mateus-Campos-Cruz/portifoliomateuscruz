@@ -467,7 +467,7 @@ hr{
 
     .header {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 80% 10%;
         margin: 20px 15px;
     }
 
@@ -484,9 +484,15 @@ hr{
         display: none;
     }
 
+    .menuBars {
+        display: block;
+    }
+
     .menuBars a i{
+        font-size: 1.5em;
         color: white;
     }
+
 
     .content2 .content-cards{
         justify-content: center;
