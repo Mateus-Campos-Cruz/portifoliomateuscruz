@@ -505,7 +505,7 @@ hr{
 
     header {
         grid-area: cabecalho;
-    
+        height: 100px;
         margin: 0;
     }
 
