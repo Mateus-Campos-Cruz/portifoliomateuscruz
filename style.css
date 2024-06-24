@@ -627,6 +627,10 @@ hr{
         margin-right: -40px;
         float: right;
     }
+
+    .cards-posts {
+        width: auto;
+    }
 }
 
 /*@MEDIA QUERIES*/
