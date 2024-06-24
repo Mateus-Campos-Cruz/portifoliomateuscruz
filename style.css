@@ -81,7 +81,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: white;
+    background: #080808;
     z-index: 1001;
     text-align: center;
     padding-top: 100px;
@@ -98,8 +98,12 @@ body {
 
 .menuOverlay ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 24px;
+}
+
+.menuOverlay ul li a:hover {
+    border-bottom: 3px solid #7900FF;
 }
 /* MENU OVERLAY */
 
@@ -483,7 +487,7 @@ hr{
     }
 }
 
-@media(max-width: 425px){
+@media(max-width: 426px){
 
     html, body {
         overflow-x: hidden;
@@ -599,5 +603,30 @@ hr{
     }
 }
 
+@media( max-width: 320px){
+    body{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px auto;
+    grid-template-areas: 
+    'cabecalho cabecalho cabecalho'
+    'conteudo conteudo conteudo'
+    ;
+    background-color: #080808;
+    
+    }
+
+    header {
+        height: 100px;
+    }
+
+    .content .matrix {
+        width: 200px;
+        margin-top: -280px;
+        margin-right: -40px;
+        float: right;
+    }
+}
 
 /*@MEDIA QUERIES*/
