@@ -10,18 +10,16 @@ const PyramidMesh = () => {
 
   useFrame((state, delta) => {
     if (meshRef.current) {
+      const time = state.clock.getElapsedTime();
+      
       // Constant rotation
-      meshRef.current.rotation.y += delta * 0.5
+      meshRef.current.rotation.y += delta * 0.5;
+      meshRef.current.rotation.x += delta * 0.2;
       
-      // Constant floating
-      meshRef.current.position.y = Math.sin(state.clock.getElapsedTime()) * 0.3
-      
-      // Mouse interaction (smooth rotation towards cursor)
-      const targetRotationX = (mouse.y * Math.PI) / 6
-      const targetRotationY = (mouse.x * Math.PI) / 6
-      
-      meshRef.current.rotation.x = THREE.MathUtils.lerp(meshRef.current.rotation.x, targetRotationX, 0.1)
-      meshRef.current.rotation.y = THREE.MathUtils.lerp(meshRef.current.rotation.y, targetRotationY, 0.1)
+      // Random wandering floating (Lissajous curve)
+      meshRef.current.position.x = Math.sin(time * 0.4) * 3.5;
+      meshRef.current.position.y = Math.sin(time * 0.6) * 2;
+      meshRef.current.position.z = Math.cos(time * 0.3) * 1.5;
     }
   })
 
@@ -33,7 +31,7 @@ const PyramidMesh = () => {
       scale={hovered ? 1.2 : 1}
     >
       {/* radialSegments=4 for square base */}
-      <coneGeometry args={[0.5, 0.8, 4]} />
+      <coneGeometry args={[0.25, 0.4, 4]} />
       <meshStandardMaterial 
         color="#3aedbe" 
         transparent={true} 
