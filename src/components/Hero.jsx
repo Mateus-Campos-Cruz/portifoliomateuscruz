@@ -65,7 +65,7 @@ const Hero = () => {
       <div className="profile-container">
         <div className="rotating-border"></div>
         <div className="profile-img">
-          <img src="img/MATEUS.heif" alt="Mateus Cruz" id="profile-pic" />
+          <img src="img/MATEUS2.jpg" alt="Mateus Cruz" id="profile-pic" />
         </div>
       </div>
     </section>
