@@ -13,13 +13,13 @@ const PyramidMesh = () => {
       const time = state.clock.getElapsedTime();
       
       // Constant rotation
-      meshRef.current.rotation.y += delta * 0.5;
-      meshRef.current.rotation.x += delta * 0.2;
+      meshRef.current.rotation.y += delta * 0.1;
+      meshRef.current.rotation.x += delta * 0.05;
       
-      // Random wandering floating (Lissajous curve)
-      meshRef.current.position.x = Math.sin(time * 0.4) * 3.5;
-      meshRef.current.position.y = Math.sin(time * 0.6) * 2;
-      meshRef.current.position.z = Math.cos(time * 0.3) * 1.5;
+      // Random wandering floating (Lissajous curve, slower)
+      meshRef.current.position.x = Math.sin(time * 0.1) * 3.5;
+      meshRef.current.position.y = Math.sin(time * 0.15) * 2;
+      meshRef.current.position.z = Math.cos(time * 0.08) * 1.5;
     }
   })
 

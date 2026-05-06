@@ -280,6 +280,8 @@ nav ul li a:hover {
 section {
     padding: 100px 10%;
     min-height: 80vh;
+    position: relative;
+    z-index: 10; /* Ensures sections stay above the 3D canvas */
 }
 
 .section-title {

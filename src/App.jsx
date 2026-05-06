@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { Environment, OrbitControls } from '@react-three/drei'
+import { Environment, OrbitControls, Stars } from '@react-three/drei'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -48,6 +48,9 @@ function App() {
             <pointLight position={[10, 10, 10]} intensity={1} />
             <directionalLight position={[-5, 5, 5]} intensity={1.5} />
             <PyramidMesh />
+            {theme === 'dark' && (
+              <Stars radius={50} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+            )}
             {/* Optional: Add environment for better shading */}
             {/* <Environment preset="city" /> */}
           </Canvas>
