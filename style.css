@@ -43,6 +43,11 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
+    cursor: none; /* Hide system cursor */
+}
+
+a, button {
+    cursor: none !important; /* Force hide for interactive elements */
 }
 
 /* Typography */
@@ -86,7 +91,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: var(--text-primary);
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1rem;
     transition: var(--transition);
 }
@@ -103,9 +108,14 @@ nav ul li a:hover {
     gap: 1.5rem;
 }
 
+.social-links {
+    display: flex;
+    gap: 2rem;
+}
+
 .social-links a {
     color: var(--text-primary);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     transition: var(--transition);
 }
 
@@ -157,11 +167,68 @@ nav ul li a:hover {
     margin: 0.5rem 0;
 }
 
+.hero-content p {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+}
+
 .dynamic-text-container {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     color: var(--accent-green);
-    min-height: 3rem;
+    min-height: 3.5rem;
+}
+
+/* Download Button */
+.hero-btns {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: flex-start; /* Align to the left under the text */
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem 2rem;
+    background: var(--accent-green);
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: var(--transition);
+    box-shadow: 0 0 20px rgba(58, 237, 190, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-download::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: 0.5s;
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.btn-download:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 35px rgba(58, 237, 190, 0.7);
+    color: #000;
 }
 
 /* Profile Image with Rotating Border */
@@ -241,24 +308,50 @@ section {
 }
 
 /* Technologies Section */
+#tech {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Adjusted for better vertical balance */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#tech .section-title {
+    margin-bottom: 5rem; /* More space from title to icons */
+}
+
 .tech-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    align-items: center;
+    gap: 4rem;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.tech-icon {
-    width: 80px;
-    height: 80px;
-    filter: brightness(0) invert(1);
+.tech-item {
+    font-size: 4rem;
+    color: #fff;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.tech-icon:hover {
-    transform: translateY(-10px);
+.tech-item img {
+    width: 60px;
+    filter: brightness(0) invert(1);
+}
+
+.tech-item:hover {
+    transform: translateY(-10px) scale(1.1);
+    color: var(--accent-green);
+}
+
+.tech-item:hover img {
     filter: none;
 }
 
@@ -382,4 +475,73 @@ section {
     .hero-content h1 {
         font-size: 2.5rem;
     }
+}
+
+/* Custom Cursor & 3D Pyramid Styles */
+#custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    color: var(--accent-green);
+    font-size: 1.5rem;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: transform 0.1s ease-out;
+}
+
+#bouncing-pyramid-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+    opacity: 0.8; /* More solid */
+}
+
+.pyramid {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+}
+
+.side {
+    position: absolute;
+    width: 100px;
+    height: 112px; /* Slant height for 100px base/height */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform-origin: 50% 100%;
+    bottom: 50px;
+    left: 25px;
+}
+
+/* Realistic Shading with Gradients */
+.face-1 { 
+    transform: rotateY(0deg) rotateX(26.5deg); 
+    background: linear-gradient(to bottom, var(--accent-green), #1a4d40);
+}
+.face-2 { 
+    transform: rotateY(90deg) rotateX(26.5deg); 
+    background: linear-gradient(to bottom, #2ec49d, #143a30);
+}
+.face-3 { 
+    transform: rotateY(180deg) rotateX(26.5deg); 
+    background: linear-gradient(to bottom, #1e856b, #0d2620);
+}
+.face-4 { 
+    transform: rotateY(270deg) rotateX(26.5deg); 
+    background: linear-gradient(to bottom, #25a182, #11322a);
+}
+
+.bottom {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #0d2620;
+    transform: rotateX(90deg) translateZ(-56px);
+    left: 25px;
+    bottom: 50px;
+    box-shadow: 0 0 50px rgba(58, 237, 190, 0.5);
 }

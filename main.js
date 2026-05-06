@@ -107,4 +107,57 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 5. Custom Rocket Cursor Logic
+    const customCursor = document.getElementById('custom-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        // Position the rocket cursor
+        customCursor.style.left = `${mouseX}px`;
+        customCursor.style.top = `${mouseY}px`;
+    });
+
+    // 6. Bouncing 3D Pyramid Logic
+    const bouncingPyramid = document.getElementById('bouncing-pyramid-container');
+    const pyramid = document.querySelector('.pyramid');
+    
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    let dx = (Math.random() - 0.5) * 4;
+    let dy = (Math.random() - 0.5) * 4;
+    let rotation = 0;
+
+    function animatePyramid() {
+        // Update positions
+        x += dx;
+        y += dy;
+        rotation += 0.5;
+
+        // Bounce off walls
+        if (x + 150 > window.innerWidth || x < 0) {
+            dx = -dx;
+        }
+        if (y + 150 > window.innerHeight || y < 0) {
+            dy = -dy;
+        }
+
+        // Apply styles
+        bouncingPyramid.style.left = `${x}px`;
+        bouncingPyramid.style.top = `${y}px`;
+        
+        if (pyramid) {
+            pyramid.style.transform = `rotateY(${rotation}deg) rotateX(${rotation / 2}deg)`;
+        }
+
+        requestAnimationFrame(animatePyramid);
+    }
+
+    animatePyramid();
+
+    // Visibility handlers for cursor
+    document.addEventListener('mouseleave', () => { customCursor.style.display = 'none'; });
+    document.addEventListener('mouseenter', () => { customCursor.style.display = 'block'; });
 });
