@@ -33,9 +33,9 @@ const PyramidMesh = () => {
       scale={hovered ? 1.2 : 1}
     >
       {/* radialSegments=4 for square base */}
-      <coneGeometry args={[1.5, 2.5, 4]} />
+      <coneGeometry args={[0.5, 0.8, 4]} />
       <meshStandardMaterial 
-        color="#34A853" 
+        color="#3aedbe" 
         transparent={true} 
         opacity={0.7} 
         roughness={0.1}
