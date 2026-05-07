@@ -6,7 +6,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Technologies from './components/Technologies'
 import Projects from './components/Projects'
-import UFO from './components/UFO'
+import UFO from './components/Pyramid'
 import RocketCursor from './components/RocketCursor'
 
 function App() {
@@ -37,10 +37,10 @@ function App() {
   return (
     <div className="app-container">
       <Header theme={theme} toggleTheme={toggleTheme} />
-      
+
       <main>
         <Hero />
-        
+
         {/* UFO Canvas Background */}
         <div id="canvas-container" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0 }}>
           <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
@@ -60,8 +60,8 @@ function App() {
         <Projects />
       </main>
 
-      <button 
-        id="back-to-top" 
+      <button
+        id="back-to-top"
         onClick={scrollToTop}
         style={{ display: showBackToTop ? 'flex' : 'none' }}
         title="Go to top"
