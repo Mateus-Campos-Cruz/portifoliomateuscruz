@@ -6,7 +6,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Technologies from './components/Technologies'
 import Projects from './components/Projects'
-import PyramidMesh from './components/Pyramid'
+import UFO from './components/UFO'
 import RocketCursor from './components/RocketCursor'
 
 function App() {
@@ -41,18 +41,17 @@ function App() {
       <main>
         <Hero />
         
-        {/* R3F Pyramid Canvas */}
+        {/* UFO Canvas Background */}
         <div id="canvas-container" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0 }}>
-          <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-            <ambientLight intensity={0.5} />
-            <pointLight position={[10, 10, 10]} intensity={1} />
-            <directionalLight position={[-5, 5, 5]} intensity={1.5} />
-            <PyramidMesh />
+          <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
+            <ambientLight intensity={0.4} />
+            <pointLight position={[0, 4, 3]} intensity={2.5} color="#ffffff" />
+            <pointLight position={[-4, -2, 2]} intensity={1.2} color="#a0c8ff" />
+            <directionalLight position={[5, 5, 3]} intensity={1.8} />
+            <UFO />
             {theme === 'dark' && (
               <Stars radius={50} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
             )}
-            {/* Optional: Add environment for better shading */}
-            {/* <Environment preset="city" /> */}
           </Canvas>
         </div>
 
