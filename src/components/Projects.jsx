@@ -2,6 +2,13 @@ import React from 'react'
 
 const projectData = [
   {
+    title: 'Granja On',
+    description: 'Platform for farm management',
+    tags: ['HTML', 'CSS', 'React', 'Javascript', ' Node'],
+    link: 'https://mateus-campos-cruz.github.io/Granja-on-local-/',
+    img: 'img/granjaon.png'
+  },
+  {
     title: 'Digibook',
     description: 'Technology school platform.',
     tags: ['HTML', 'CSS'],
