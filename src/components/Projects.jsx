@@ -9,6 +9,13 @@ const projectData = [
     img: 'img/deepbeat.png'
   },
   {
+    title: 'Granja On',
+    description: 'Platform for farm management',
+    tags: ['HTML', 'CSS', 'React', 'Javascript', ' Node'],
+    link: 'https:/github.com/Mateus-Campos-Cruz/Granja-on-local-',
+    img: 'img/granjaon.png'
+  },
+  {
     title: 'Digibook',
     description: 'Technology school platform.',
     tags: ['HTML', 'CSS'],
