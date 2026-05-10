@@ -35,27 +35,6 @@ const projectData = [
     tags: ['HTML', 'CSS'],
     link: 'https://mateus-campos-cruz.github.io/monetaire/',
     img: 'img/monetaire.JPG'
-  },
-  {
-    title: 'Tiger Tech',
-    description: 'AI News and technology hub.',
-    tags: ['HTML', 'CSS', 'JS'],
-    link: 'https://mateus-campos-cruz.github.io/tigertech/contact.html',
-    img: 'img/tigertech.JPG'
-  },
-  {
-    title: "Don't Panic!",
-    description: 'Mobile component store and repair service.',
-    tags: ['HTML', 'CSS', 'JS'],
-    link: 'https://mateus-campos-cruz.github.io/DontPanic/',
-    img: 'img/dontpanic.JPG'
-  },
-  {
-    title: 'Pet Shop City',
-    description: 'Price comparison tool for pet shops.',
-    tags: ['React', 'JS'],
-    link: 'https://mateus-campos-cruz.github.io/petshopcity/',
-    img: 'img/petshopcity.JPG'
   }
 ];
 
