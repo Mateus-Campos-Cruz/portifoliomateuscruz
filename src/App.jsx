@@ -8,6 +8,7 @@ import Technologies from './components/Technologies'
 import Projects from './components/Projects'
 import UFO from './components/Pyramid'
 import RocketCursor from './components/RocketCursor'
+import BackgroundMusic from './components/BackgroundMusic'
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
@@ -70,6 +71,7 @@ function App() {
       </button>
 
       <RocketCursor />
+      <BackgroundMusic />
     </div>
   )
 }

@@ -552,3 +552,35 @@ section {
     bottom: 50px;
     box-shadow: 0 0 50px rgba(58, 237, 190, 0.5);
 }
+
+/* Music Toggle Button */
+#music-toggle {
+    position: fixed;
+    top: 100px; /* Below the header */
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 1001; /* Above header */
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#music-toggle:hover {
+    transform: scale(1.1);
+    border-color: var(--accent-green);
+    color: var(--accent-green);
+}
+
+#music-toggle.muted {
+    color: var(--text-secondary);
+}
