@@ -4,15 +4,26 @@ const BackgroundMusic = () => {
     const [isMuted, setIsMuted] = useState(true);
     const audioRef = useRef(null);
 
+    // Get the base URL from Vite (handles /portifoliomateuscruz/ vs /)
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    const audioSrc = `${baseUrl}audio/bg-music.mp3`.replace(/\/+/g, '/');
+
     useEffect(() => {
+        const audio = audioRef.current;
+        if (!audio) return;
+
         // Attempt to play on first interaction due to browser policies
         const playOnInteraction = () => {
-            if (audioRef.current && isMuted) {
-                // We keep it muted by default to respect user/browser policies
-                // but we start the playback
-                audioRef.current.play().catch(err => console.log("Autoplay blocked:", err));
-                window.removeEventListener('click', playOnInteraction);
-                window.removeEventListener('scroll', playOnInteraction);
+            if (audio.paused) {
+                audio.play()
+                    .then(() => {
+                        console.log("Background music started (muted)");
+                        window.removeEventListener('click', playOnInteraction);
+                        window.removeEventListener('scroll', playOnInteraction);
+                    })
+                    .catch(err => {
+                        console.log("Autoplay still blocked:", err);
+                    });
             }
         };
 
@@ -31,9 +42,11 @@ const BackgroundMusic = () => {
             audioRef.current.muted = newMutedState;
             setIsMuted(newMutedState);
             
-            // If unmuting for the first time and not playing, play it
-            if (!newMutedState && audioRef.current.paused) {
-                audioRef.current.play();
+            // Explicitly call play if unmuting, in case it was paused or failed to start
+            if (!newMutedState) {
+                audioRef.current.play().catch(err => {
+                    console.error("Error playing audio on unmute:", err);
+                });
             }
         }
     };
@@ -42,9 +55,10 @@ const BackgroundMusic = () => {
         <>
             <audio
                 ref={audioRef}
-                src="/audio/bg-music.mp3"
+                src={audioSrc}
                 loop
                 muted={isMuted}
+                preload="auto"
             />
             <button
                 id="music-toggle"
