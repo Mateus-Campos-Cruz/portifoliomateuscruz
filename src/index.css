@@ -232,7 +232,7 @@ nav ul li a:hover {
     color: #000;
 }
 
-/* Profile Image with Rotating Border */
+/* Profile Image with 3D Flip (Coin) Effect */
 .profile-container {
     position: relative;
     width: 350px;
@@ -240,6 +240,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 1000px;
 }
 
 .rotating-border {
@@ -252,23 +253,41 @@ nav ul li a:hover {
     z-index: 1;
 }
 
-.profile-img {
+.profile-card {
     position: relative;
     width: 95%;
     height: 95%;
-    background: var(--bg-primary);
-    border-radius: 50%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 2;
+}
+
+.profile-card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.profile-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 50%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--bg-primary);
 }
 
-.profile-img img {
+.profile-face img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.profile-face.back {
+    transform: rotateY(180deg);
 }
 
 @keyframes rotate {

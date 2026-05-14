@@ -46,6 +46,16 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [charIndex, isDeleting, skillIndex, typingSpeed]);
 
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  useEffect(() => {
+    const flipInterval = setInterval(() => {
+      setIsFlipped(prev => !prev);
+    }, 5000);
+
+    return () => clearInterval(flipInterval);
+  }, []);
+
   return (
     <section id="home" className="hero">
       <div className="hero-content">
@@ -64,8 +74,13 @@ const Hero = () => {
       
       <div className="profile-container">
         <div className="rotating-border"></div>
-        <div className="profile-img">
-          <img src="img/MATEUS2.jpg" alt="Mateus Cruz" id="profile-pic" />
+        <div className={`profile-card ${isFlipped ? 'is-flipped' : ''}`}>
+          <div className="profile-face front">
+            <img src="img/MATEUS2.jpg" alt="Mateus Cruz" />
+          </div>
+          <div className="profile-face back">
+            <img src="img/MATEUS3.png" alt="Mateus Cruz Anime" />
+          </div>
         </div>
       </div>
     </section>
