@@ -66,12 +66,12 @@ const Hero = () => {
           <span id="typing-text">{displayText}</span><span className="cursor">|</span>
         </div>
         <div className="hero-btns">
-          <a href="Mateus Cruz - Jan 2026.pdf" download className="btn-download">
+          <a href="Mateus Cruz - Maio 2026 - Dev.pdf" download className="btn-download">
             <i className="fa-solid fa-download"></i> Download Resume
           </a>
         </div>
       </div>
-      
+
       <div className="profile-container">
         <div className="rotating-border"></div>
         <div className={`profile-card ${isFlipped ? 'is-flipped' : ''}`}>
