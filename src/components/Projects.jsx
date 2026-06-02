@@ -2,6 +2,13 @@ import React from 'react'
 
 const projectData = [
   {
+    title: 'Dev Master Pro',
+    description: 'High-converting landing page for a web development course.',
+    tags: ['React', 'Vite', 'CSS', 'Javascript'],
+    link: 'https://mateus-campos-cruz.github.io/devmasterpro',
+    img: 'img/devmasterpro.png'
+  },
+  {
     title: 'Deep Beat',
     description: 'Music production platform for producers and artists',
     tags: ['React', 'Node', 'PostgreSQL'],
